@@ -1,0 +1,14 @@
+{
+  "name": "image-url",
+  "repo": "hugojosefson/image-url",
+  "description": "AngularJS directive for validating and figuring out width/height from an image url.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

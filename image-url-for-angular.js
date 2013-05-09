@@ -1,4 +1,3 @@
-module.exports = function () {
 /**
  * Declares AngularJS module <code>imageUrl</code>.
  *
@@ -57,4 +56,3 @@ imageUrlModule.directive("imageUrl", function ($parse) {
     }
   };
 });
-};

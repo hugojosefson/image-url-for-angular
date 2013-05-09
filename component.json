@@ -1,11 +1,13 @@
 {
-  "name": "image-url",
-  "repo": "hugojosefson/image-url",
+  "name": "image-url-for-angular",
+  "repo": "hugojosefson/image-url-for-angular",
   "description": "AngularJS directive for validating and figuring out width/height from an image url.",
-  "version": "0.0.1",
-  "keywords": [],
+  "version": "0.0.1.snapshot",
+  "keywords": ["angularjs", "angular", "image", "valid", "dimensions", "width", "height", "url"],
   "dependencies": {},
-  "development": {},
+  "development": {
+    "hugojosefson/uncomponent-wrapper": "0.0.2"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [

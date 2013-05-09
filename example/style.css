@@ -1,0 +1,9 @@
+/* Put your css in here */
+
+table {
+    padding-bottom: 10em;
+}
+
+[ng-click] {
+    cursor: pointer;
+}

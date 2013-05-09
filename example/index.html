@@ -1,0 +1,54 @@
+<!doctype html>
+<html ng-app="plunker">
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Plunker</title>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+  <script src="http://code.angularjs.org/1.1.4/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script src="../build/build.js"></script>
+  <script src="../image-url-for-angular.js"></script>
+  <script src="addVariant.js"></script>
+  <script src="lookupSize.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+<div class="container">
+  <div class="hero-unit">
+    <h1>
+      Create new item!
+    </h1>
+  </div>
+  <form name="theForm">
+    <table class="table table-stripe" ng-repeat="(imageTypeName, imageType) in images">
+      <caption>{{imageTypeName}}</caption>
+      <thead>
+      <tr>
+        <th ng-repeat="imageSize in imageSizes">{{imageSize}}</th>
+        <th>add</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="(imageIndex, image) in imageType">
+        <td ng-repeat="imageSize in imageSizes">
+          <div ng-show="image.variants[imageSize]">
+            <img ng-src="{{image.variants[imageSize]}}" width="40" height="40"/>
+            <button ng-click="deleteVariant(imageType, image, imageSize)"
+                    class="delete icon icon-trash"></button>
+          </div>
+          <span ng-show="!image.variants[imageSize]">(none)</span>
+        </td>
+        <td>
+          <div add-variant="image"/>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+
+</body>
+</html>

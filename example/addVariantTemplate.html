@@ -1,0 +1,16 @@
+<div ng-form name="addVariantForm">
+
+  <input name="url" type="url" ng-model="newVariant.url" image-url
+         image-url-height-model="newVariant.height" image-url-width-model="newVariant.width"/>
+
+  <button ng-show="newVariant.url && !newVariant.size" disabled>Checking...</button>
+  <button ng-show="newVariant.size" ng-click="addNewVariant()">Set as {{newVariant.size}}</button>
+
+  <div ng-show="addVariantForm.url.$valid">
+    <img ng-src="{{newVariant.url}}" width="40" height="40"/>
+    {{newVariant.height}}x{{newVariant.width}}
+  </div>
+
+  <span ng-show="addVariantForm.url.$invalid">invalid image</span>
+
+</div>

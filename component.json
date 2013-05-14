@@ -6,7 +6,8 @@
   "keywords": ["angularjs", "angular", "image", "valid", "dimensions", "width", "height", "url"],
   "dependencies": {},
   "development": {
-    "hugojosefson/uncomponent-wrapper": "0.0.2"
+    "hugojosefson/uncomponent-wrapper": "0.0.2",
+    "hugojosefson/update-bower-from-component": "0.0.2"
   },
   "license": "MIT",
   "main": "index.js",

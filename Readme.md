@@ -7,7 +7,7 @@
 
 ### As a [component](https://github.com/component/component)
 
-    $ component install hugojosefson/image-url-for-angular
+    $ component install hugojosefson/image-url-for-angular@0.0.1
 
 In JS, to let it register its AngularJS module:
 
@@ -15,7 +15,7 @@ In JS, to let it register its AngularJS module:
 
 ### Old-school
 
-    $ wget https://raw.github.com/hugojosefson/image-url-for-angular/master/image-url-for-angular.js
+    $ wget https://raw.github.com/hugojosefson/image-url-for-angular/0.0.1/image-url-for-angular.js
 
 In HTML:
 

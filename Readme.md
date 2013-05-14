@@ -13,6 +13,14 @@ In JS, to let it register its AngularJS module:
 
     require("image-url-for-angular")();
 
+### With [Bower](http://bower.io/)
+
+    $ bower install hugojosefson-image-url-for-angular
+
+In HTML:
+
+    <script src="components/hugojosefson-image-url-for-angular/image-url-for-angular.js"></script>
+
 ### Old-school
 
     $ wget https://raw.github.com/hugojosefson/image-url-for-angular/0.0.1/image-url-for-angular.js

@@ -1,0 +1,8 @@
+{
+  "name": "hugojosefson-image-url-for-angular",
+  "version": "0.0.2.snapshot",
+  "main": "image-url-for-angular.js",
+  "ignore": [
+    "example/**"
+  ]
+}

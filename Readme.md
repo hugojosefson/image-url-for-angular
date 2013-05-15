@@ -7,11 +7,11 @@
 
 ### As a [component](https://github.com/component/component)
 
-    $ component install hugojosefson/image-url-for-angular@0.0.2
+    $ component install hugojosefson/image-url-for-angular@0.0.3
 
 In JS, to let it register its AngularJS module:
 
-    require("image-url-for-angular")();
+    require("image-url-for-angular");
 
 ### With [Bower](http://bower.io/)
 
@@ -19,15 +19,15 @@ In JS, to let it register its AngularJS module:
 
 In HTML:
 
-    <script src="components/hugojosefson-image-url-for-angular/image-url-for-angular.js"></script>
+    <script src="components/hugojosefson-image-url-for-angular/index.js"></script>
 
 ### Old-school
 
-    $ wget https://raw.github.com/hugojosefson/image-url-for-angular/0.0.2/image-url-for-angular.js
+    $ wget https://raw.github.com/hugojosefson/image-url-for-angular/0.0.3/index.js -O image-url-for-angular-0.0.3.js
 
 In HTML:
 
-    <script src="image-url-for-angular.js"></script>
+    <script src="image-url-for-angular-0.0.3.js"></script>
 
 ## API
 

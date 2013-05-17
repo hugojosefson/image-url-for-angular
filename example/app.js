@@ -2,14 +2,6 @@ var app = angular.module('plunker', ['addVariant']);
 
 app.controller('MainCtrl', function ($scope) {
 
-  $scope.transient = {
-    newVariant: {
-      width: null,
-      height: null,
-      size: null
-    }
-  };
-
   $scope.deleteVariant = function (images, image, imageSize) {
     delete image.variants[imageSize];
     if (_.isEmpty(image.variants)) {

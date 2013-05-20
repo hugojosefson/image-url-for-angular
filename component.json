@@ -4,7 +4,9 @@
   "description": "AngularJS directive for validating and figuring out width/height from an image url.",
   "version": "0.0.4.snapshot",
   "keywords": ["angularjs", "angular", "image", "valid", "dimensions", "width", "height", "url"],
-  "dependencies": {},
+  "dependencies": {
+    "hugojosefson/require-all-for-angular-modules": "0.0.1"
+  },
   "development": {
     "hugojosefson/update-bower-from-component": "0.1.0"
   },

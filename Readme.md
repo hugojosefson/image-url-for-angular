@@ -7,7 +7,7 @@
 
 ### As a [component](https://github.com/component/component)
 
-    $ component install hugojosefson/image-url-for-angular@0.0.3
+    $ component install hugojosefson/image-url-for-angular@0.0.4
 
 In JS, to let it register its AngularJS module:
 
@@ -23,11 +23,11 @@ In HTML:
 
 ### Old-school
 
-    $ wget https://raw.github.com/hugojosefson/image-url-for-angular/0.0.3/index.js -O image-url-for-angular-0.0.3.js
+    $ wget https://raw.github.com/hugojosefson/image-url-for-angular/0.0.4/index.js -O image-url-for-angular-0.0.4.js
 
 In HTML:
 
-    <script src="image-url-for-angular-0.0.3.js"></script>
+    <script src="image-url-for-angular-0.0.4.js"></script>
 
 ## API
 

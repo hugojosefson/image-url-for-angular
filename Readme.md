@@ -55,6 +55,15 @@ any of them is specified, the directive will keep the corresponding scope variab
 In case of an error, for example if the url is incorrect, or the image loaded is not a valid image, width and height
 models are set to `null` and the form field's validity is set to invalid (specified as
 `imageUrl`.)
+
+### Avoiding integration with form validity
+
+If the url should not be part of the validity checking of its form (and by extension its parent form), use can specify
+the attribute `image-url-integrate-with-form-validity="false"` on the `<input />` tag. Then it will not set `$valid` nor
+`$invalid`.
+
+For most cases you can check for a valid image by checking the width and/or height models instead, if you expect images
+to be > 0 pixels.
        
 
 ## License

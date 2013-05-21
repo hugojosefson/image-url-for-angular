@@ -24,23 +24,29 @@ imageUrlModule.directive("imageUrl", function ($parse) {
 
       var setWidth = iAttrs.imageUrlWidthModel ? createSetter(iAttrs.imageUrlWidthModel) : noop;
       var setHeight = iAttrs.imageUrlHeightModel ? createSetter(iAttrs.imageUrlHeightModel) : noop;
+      var setValidity = function (isValid) {
+        // Don't $setValidity when asked not to
+        if (iAttrs.imageUrlIntegrateWithFormValidity != "false") {
+          ngModel.$setValidity("imageUrl", isValid);
+        }
+      };
 
       scope.$watch(iAttrs.ngModel, function (newUrl, oldUrl) {
 
-        ngModel.$setValidity("imageUrl", false);
+        setValidity(false);
 
         if (newUrl && (newUrl != oldUrl)) {
           var image = new Image();
           image.onload = function () {
             scope.$apply(function () {
-              ngModel.$setValidity("imageUrl", true);
+              setValidity(true);
               setWidth(image.width);
               setHeight(image.height);
             });
           };
           image.onerror = function () {
             scope.$apply(function () {
-              ngModel.$setValidity("imageUrl", false);
+              setValidity(false);
               setWidth(null);
               setHeight(null);
             });

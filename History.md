@@ -9,3 +9,6 @@
 
 ### 0.0.4
    * Add support for `image-url-integrate-with-form-validity="false"`.
+
+### 0.0.5
+   * Add support for `image-url-status-model="..."`.

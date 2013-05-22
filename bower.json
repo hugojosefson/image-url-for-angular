@@ -1,6 +1,6 @@
 {
   "name": "hugojosefson-image-url-for-angular",
-  "version": "0.0.5.snapshot",
+  "version": "0.0.5",
   "main": "index.js",
   "ignore": [
     "example/**"

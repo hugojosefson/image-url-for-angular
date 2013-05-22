@@ -24,6 +24,7 @@ imageUrlModule.directive("imageUrl", function ($parse) {
 
       var setWidth = iAttrs.imageUrlWidthModel ? createSetter(iAttrs.imageUrlWidthModel) : noop;
       var setHeight = iAttrs.imageUrlHeightModel ? createSetter(iAttrs.imageUrlHeightModel) : noop;
+      var setStatus = iAttrs.imageUrlStatusModel ? createSetter(iAttrs.imageUrlStatusModel) : noop;
       var setValidity = function (isValid) {
         // Don't $setValidity when asked not to
         if (iAttrs.imageUrlIntegrateWithFormValidity != "false") {
@@ -33,26 +34,32 @@ imageUrlModule.directive("imageUrl", function ($parse) {
 
       scope.$watch(iAttrs.ngModel, function (newUrl, oldUrl) {
 
-        setValidity(false);
-
-        if (newUrl && (newUrl != oldUrl)) {
-          var image = new Image();
-          image.onload = function () {
-            scope.$apply(function () {
-              setValidity(true);
-              setWidth(image.width);
-              setHeight(image.height);
-            });
-          };
-          image.onerror = function () {
-            scope.$apply(function () {
-              setValidity(false);
-              setWidth(null);
-              setHeight(null);
-            });
-          };
-          image.src = newUrl;
+        if (newUrl) {
+          if (newUrl != oldUrl) {
+            setStatus("checking");
+            setValidity(false);
+            var image = new Image();
+            image.onload = function () {
+              scope.$apply(function () {
+                setStatus("ok");
+                setValidity(true);
+                setWidth(image.width);
+                setHeight(image.height);
+              });
+            };
+            image.onerror = function () {
+              scope.$apply(function () {
+                setStatus("error");
+                setValidity(false);
+                setWidth(null);
+                setHeight(null);
+              });
+            };
+            image.src = newUrl;
+          }
         } else {
+          setStatus(null);
+          setValidity(false);
           setWidth(null);
           setHeight(null);
         }

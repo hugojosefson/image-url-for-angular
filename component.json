@@ -2,7 +2,7 @@
   "name": "image-url-for-angular",
   "repo": "hugojosefson/image-url-for-angular",
   "description": "AngularJS directive for validating and figuring out width/height from an image url.",
-  "version": "0.0.6",
+  "version": "0.0.6.snapshot",
   "keywords": ["angularjs", "angular", "image", "valid", "dimensions", "width", "height", "url"],
   "dependencies": {},
   "development": {

@@ -32,10 +32,12 @@ imageUrlModule.directive("imageUrl", function ($parse) {
         }
       };
 
+      var hasRunAtLeastOnce = false;
       scope.$watch(iAttrs.ngModel, function (newUrl, oldUrl) {
 
         if (newUrl) {
-          if (newUrl != oldUrl) {
+          if (!hasRunAtLeastOnce || newUrl != oldUrl) {
+            hasRunAtLeastOnce = true;
             setStatus("checking");
             setValidity(false);
             var image = new Image();

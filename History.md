@@ -12,3 +12,6 @@
 
 ### 0.0.5
    * Add support for `image-url-status-model="..."`.
+
+### 0.0.6
+   * Check image even if `$watch` doesn't call with `null` the first time.
